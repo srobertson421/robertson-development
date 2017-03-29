@@ -14,7 +14,10 @@ class Navbar extends Component {
               </button>
               <ul className="nav-links">
                 <li><NavLink exact to="/">Home</NavLink></li>
+                <li><NavLink to="/resources">Resources</NavLink></li>
                 <li><NavLink to="/about">About</NavLink></li>
+                <li><NavLink to="/services">Services</NavLink></li>
+                <li><NavLink to="/testimonials">Testimonials</NavLink></li>
                 <li><NavLink to="/contact">Contact</NavLink></li>
               </ul>
             </div>

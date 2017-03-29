@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
+import Resources from './pages/Resources/Resources';
+import Services from './pages/Services/Services';
+import Testimonials from './pages/Testimonials/Testimonials';
 
 import Navbar from './components/Navbar/Navbar';
 
@@ -14,20 +17,80 @@ class App extends Component {
     super(props);
 
     this.state = {
-      siteContent: {
-        pages: {
-          home: {
-            mainText: ''
+      "siteContent" : {
+        "pages" : {
+          "about" : {
+            "mainText" : {
+              "lede" : "",
+              "line1" : "",
+              "line2" : "",
+              "line3" : "",
+              "line4" : "",
+              "line5" : "",
+              "line6" : "",
+              "type" : ""
+            }
           },
-          about: {
-            mainText: ''
+          "contact" : {
+            "mainText" : {
+              "line1" : "",
+              "line2" : "",
+              "line3" : "",
+              "line4" : "",
+              "line5" : "",
+              "type" : ""
+            }
           },
-          contact: {
-            mainText: ''
+          "home" : {
+            "mainText" : {
+              "text" : "",
+              "type" : ""
+            }
+          },
+          "resources" : {
+            "mainText" : {
+              "lede" : "",
+              "line1" : "",
+              "line2" : "",
+              "line3" : "",
+              "line4" : "",
+              "type" : ""
+            },
+            "secondaryText" : ""
+          },
+          "services" : {
+            "mainText" : {
+              "lede" : "",
+              "listItems" : {
+                "1": '',
+                "2": '',
+                "3": '',
+                "4": '',
+                "5": '',
+                "6": '',
+                "7": '',
+                "8": '',
+                "9": '',
+                "10": '',
+                "11": '',
+                "12": ''
+              },
+              "type" : ""
+            }
+          },
+          "testimonials" : {
+            "mainText" : {
+              "line1" : "",
+              "line2" : "",
+              "line3" : "",
+              "line4" : "",
+              "line5" : "",
+              "type" : ""
+            }
           }
         }
       }
-    };
+    }
   }
 
   componentDidMount() {
@@ -44,6 +107,9 @@ class App extends Component {
           <Route exact path="/" render={(props) => {return this.routeRender(props)}} />
           <Route path="/about"  render={(props) => {return this.routeRender(props)}} />
           <Route path="/contact" render={(props) => {return this.routeRender(props)}} />
+          <Route path="/resources" render={(props) => {return this.routeRender(props)}} />
+          <Route path="/services" render={(props) => {return this.routeRender(props)}} />
+          <Route path="/testimonials" render={(props) => {return this.routeRender(props)}} />
         </div>
       </Router>
     );
@@ -61,6 +127,15 @@ class App extends Component {
         break;
       case 'about':
         component = (<About {...props}/>);
+        break;
+      case 'resources':
+        component = (<Resources {...props}/>);
+        break;
+      case 'services':
+        component = (<Services {...props}/>);
+        break;
+      case 'testimonials':
+        component = (<Testimonials {...props}/>);
         break;
       case 'contact':
         component = (<Contact {...props}/>);

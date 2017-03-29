@@ -8,7 +8,7 @@ class Home extends Component {
       <div className="container">
         <div className="row">
           <div className="eight columns content-area">
-            <h1>{this.props.pageData.mainText}</h1>
+            <h1>{this.props.pageData.mainText.text}</h1>
           </div>
           <div className="four columns">
             <EventPhotoWidget currentPage={this.props.pageName} />

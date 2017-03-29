@@ -4,11 +4,21 @@ import EventPhotoWidget from '../../components/EventPhotoWidget/EventPhotoWidget
 
 class About extends Component {
   render() {
+    let items = [];
+    for(let key in this.props.pageData.mainText) {
+      if(key === 'lede' || key === 'type') {
+        continue;
+      }
+
+      items.push((<p key={key}>{this.props.pageData.mainText[key]}</p>));
+    }
+
     return (
       <div className="container">
         <div className="row">
           <div className="eight columns content-area">
-            <h1>{this.props.pageData.mainText}</h1>
+            <h3>{this.props.pageData.mainText.lede}</h3>
+            {items}
           </div>
           <div className="four columns">
             <EventPhotoWidget currentPage={this.props.pageName} />
