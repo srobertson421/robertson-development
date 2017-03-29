@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://srobertson421.github.io/robertson-development",
   "dependencies": {
+    "firebase": "^3.7.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^4.0.0",

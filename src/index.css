@@ -82,6 +82,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: url('./images/rice-bg.png');
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -95,4 +96,26 @@ p,a {
 
 li {
   margin: 0;
+}
+
+.content-area {
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.widget {
+  display: none;
+  background-image: url('https://placehold.it/350x150');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 450px;
+  margin-top: 20px;
+}
+
+@media(min-width: 400px) {
+  .widget {
+    display: block;
+  }
 }
