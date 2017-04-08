@@ -26,7 +26,7 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <img className="img-responsive" src={this.state.headerLogo} alt="Robertson Development Logo"/>
+        <img id="header-image" className="img-responsive" src={this.state.headerLogo} alt="Robertson Development Logo"/>
         <nav id="navbar" className="u-full-width">
           <div className="container">
             <div className="row">

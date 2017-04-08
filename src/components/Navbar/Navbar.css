@@ -45,6 +45,11 @@ nav#navbar ul.nav-links li a.active {
 }
 
 @media(min-width:775px) {
+  #header-image {
+    width: 50%;
+    max-height: 150px;
+  }
+
   nav#navbar {
     padding: 10px 0;
     clear: both;
@@ -69,5 +74,12 @@ nav#navbar ul.nav-links li a.active {
     float: left;
     display: block;
     margin-right: 20px;
+  }
+}
+
+@media(min-width:1000px) {
+  #header-image {
+    width: 25%;
+    max-height: 150px;
   }
 }

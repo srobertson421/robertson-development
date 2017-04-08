@@ -128,7 +128,7 @@ li {
   margin-top: 20px;
 }
 
-@media(min-width:550px) {
+@media(min-width:775px) {
   .widget {
     display: block;
   }
