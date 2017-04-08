@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Home.css';
 
 import EventPhotoWidget from '../../components/EventPhotoWidget/EventPhotoWidget';
 
@@ -8,7 +9,7 @@ class Home extends Component {
       <div className="container">
         <div className="row">
           <div className="eight columns content-area">
-            <h1>{this.props.pageData.mainText.text}</h1>
+            <h3 className="home-header page-header">{this.props.pageData.mainText.text}</h3>
           </div>
           <div className="four columns">
             <EventPhotoWidget currentPage={this.props.pageName} />
