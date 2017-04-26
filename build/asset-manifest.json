@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.efe3d671.css",
-  "main.css.map": "static/css/main.efe3d671.css.map",
-  "main.js": "static/js/main.de7d70a2.js",
-  "main.js.map": "static/js/main.de7d70a2.js.map",
+  "main.css": "static/css/main.fb3915e7.css",
+  "main.css.map": "static/css/main.fb3915e7.css.map",
+  "main.js": "static/js/main.a5028cce.js",
+  "main.js.map": "static/js/main.a5028cce.js.map",
   "static\\media\\Cardo-Bold.ttf": "static/media/Cardo-Bold.6e0e7e55.ttf",
   "static\\media\\Cardo-Italic.ttf": "static/media/Cardo-Italic.d5713175.ttf",
   "static\\media\\Cardo-Regular.ttf": "static/media/Cardo-Regular.e6637481.ttf",
@@ -16,5 +16,6 @@
   "static\\media\\JosefinSans-SemiBoldItalic.ttf": "static/media/JosefinSans-SemiBoldItalic.a3057aab.ttf",
   "static\\media\\JosefinSans-Thin.ttf": "static/media/JosefinSans-Thin.704b3e98.ttf",
   "static\\media\\JosefinSans-ThinItalic.ttf": "static/media/JosefinSans-ThinItalic.748871d4.ttf",
+  "static\\media\\homepage-side.jpg": "static/media/homepage-side.c7b4a2b7.jpg",
   "static\\media\\rice-bg.png": "static/media/rice-bg.68ad9411.png"
 }
