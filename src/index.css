@@ -91,7 +91,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p,a {
-  font-family: 'JosefinSans'
+  font-family: 'JosefinSans';
+  font-weight: 600;
+  text-decoration: none;
 }
 
 li {
@@ -118,18 +120,4 @@ li {
   margin-top: 20px;
 }
 
-.widget {
-  display: none;
-  background-image: url('https://placehold.it/350x150');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 450px;
-  margin-top: 20px;
-}
-
-@media(min-width:775px) {
-  .widget {
-    display: block;
-  }
-}
+@media(min-width:775px) {}

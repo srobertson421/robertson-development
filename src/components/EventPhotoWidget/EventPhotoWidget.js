@@ -16,7 +16,7 @@ class EventPhotoWidget extends Component {
   render() {
     return (
       <div className="widget">
-        {this.props.currentPage}
+        <img className="img-responsive" src={this.props.imagePath} alt={`${this.props.currentPage} side pic`} />
       </div>
     );
   }

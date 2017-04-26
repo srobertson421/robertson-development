@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import './Home.css';
 import homeImage from '../../images/homepage-side.jpg';
 
 import EventPhotoWidget from '../../components/EventPhotoWidget/EventPhotoWidget';
+import PostList from '../../components/PostList/PostList';
 
-class Home extends Component {
+class Blog extends Component {
   render() {
     return (
       <div className="container">
         <div className="row">
           <div className="eight columns content-area">
-            <h3 className="home-header page-header">{this.props.pageData.mainText.text}</h3>
             <div className="row">
-
+              <PostList posts={this.props.posts} />
             </div>
           </div>
           <div className="four columns">
@@ -24,4 +23,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Blog;

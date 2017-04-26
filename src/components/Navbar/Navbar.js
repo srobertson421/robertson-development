@@ -24,6 +24,10 @@ class Navbar extends Component {
   }
 
   render() {
+    let adminLink = null;
+    if(this.props.isLoggedIn) {
+      adminLink = <li onClick={(e) => {this.toggleMenu(e)}}><NavLink to="/admin">Admin</NavLink></li>
+    }
     return (
       <div>
         <img id="header-image" className="img-responsive" src={this.state.headerLogo} alt="Robertson Development Logo"/>
@@ -41,8 +45,10 @@ class Navbar extends Component {
                   <li onClick={(e) => {this.toggleMenu(e)}}><NavLink to="/resources">Resources</NavLink></li>
                   <li onClick={(e) => {this.toggleMenu(e)}}><NavLink to="/about">About</NavLink></li>
                   <li onClick={(e) => {this.toggleMenu(e)}}><NavLink to="/services">Services</NavLink></li>
+                  <li onClick={(e) => {this.toggleMenu(e)}}><NavLink to="/blog">Blog</NavLink></li>
                   <li onClick={(e) => {this.toggleMenu(e)}}><NavLink to="/testimonials">Testimonials</NavLink></li>
                   <li onClick={(e) => {this.toggleMenu(e)}}><NavLink to="/contact">Contact</NavLink></li>
+                  {adminLink}
                 </ul>
               </div>
             </div>

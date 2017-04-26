@@ -5,8 +5,10 @@
   "homepage": "http://srobertson421.github.io/robertson-development",
   "dependencies": {
     "firebase": "^3.7.4",
+    "moment": "^2.18.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-quill": "^1.0.0-rc.2",
     "react-router": "^4.0.0",
     "react-router-dom": "^4.0.0",
     "react-skeleton-css": "^1.0.2"
