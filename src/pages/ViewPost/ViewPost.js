@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import moment from 'moment';
 import { db } from '../../services/firebase-service';
 
+import './ViewPost.css';
+
 class ViewPost extends Component {
   constructor(props) {
     super(props);
@@ -26,10 +28,10 @@ class ViewPost extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row">
+        <div className="row post">
           <div className="twelve columns content-area">
-            <h3 className="home-header page-header">{this.state.post.title}</h3>
-            <span>{moment(this.state.post.createdAt).fromNow()}</span>
+            <h3 className="page-header">{this.state.post.title}</h3>
+            <span className="post-time">Posted {moment(this.state.post.createdAt).fromNow()}</span>
             <div className="row">
               <div ref="postContent"></div>
             </div>

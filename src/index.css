@@ -1,3 +1,9 @@
+/*
+Orange - #F7941D
+Green - #B4D342
+Teal - #11B7B6
+*/
+
 @font-face {
   font-family: 'Cardo';
   src: local('Cardo'), url(./fonts/cardo/Cardo-Regular.ttf) format('truetype');
@@ -82,7 +88,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: url('./images/rice-bg.png');
+  background-color: #fbfaf6;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -94,10 +100,18 @@ p,a {
   font-family: 'JosefinSans';
   font-weight: 600;
   text-decoration: none;
+  color: #000;
 }
 
 li {
   margin: 0;
+}
+
+hr.pretty {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
 .clearfix {
@@ -111,11 +125,12 @@ li {
 }
 
 .page-header {
-  font-size: 20px;
+  text-align: center;
+  font-size: 1.6em;
 }
 
 .content-area {
-  background-color: #fff;
+  /*background-color: #fff;*/
   padding: 20px;
   margin-top: 20px;
 }

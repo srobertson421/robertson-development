@@ -1,0 +1,31 @@
+.post-item {
+  background-color: #B4D342;
+  padding: 15px;
+}
+
+.post-item:hover {
+  background-color: #94B342;
+  cursor: pointer;
+}
+
+.post-item > a {
+  color: #000;
+}
+
+.post-item > a:hover {
+  color: #000;
+}
+
+.post-item p {
+  margin-bottom: 5px;
+}
+
+.post-item-header > h4 {
+  margin-bottom: 5px;
+}
+
+.post-item-header > span {
+  font-size: 1em;
+  margin-bottom: 10px;
+  display: block;
+}

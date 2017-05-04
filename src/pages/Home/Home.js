@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 import homeImage from '../../images/homepage-side.jpg';
 
@@ -10,9 +11,48 @@ class Home extends Component {
       <div className="container">
         <div className="row">
           <div className="eight columns content-area">
-            <h3 className="home-header page-header">{this.props.pageData.mainText.text}</h3>
+            <h3 className="home-header">Connecting people and organizations to ideas and resources that create opportunities to grow</h3>
+            <hr className="pretty"></hr>
+            <h3 className="home-header">I can help with</h3>
             <div className="row">
-
+              <div className="one-third column service">
+                <Link to="/services">
+                  <i className="fa fa-file-text-o" aria-hidden="true"></i>
+                  <p>Grant Writing</p>
+                </Link>
+              </div>
+              <div className="one-third column service">
+                <Link to="/services">
+                  <i className="fa fa-calendar" aria-hidden="true"></i>
+                  <p>Annual Fund Development</p>
+                </Link>
+              </div>
+              <div className="one-third column service">
+                <Link to="/services">
+                  <i className="fa fa-graduation-cap" aria-hidden="true"></i>
+                  <p>Funding Stream Coaching</p>
+                </Link>
+              </div>
+            </div>
+            <div className="row">
+              <div className="one-third column service">
+                <Link to="/services">
+                  <i className="fa fa-microphone" aria-hidden="true"></i>
+                  <p>Public Speaking</p>
+                </Link>
+              </div>
+              <div className="one-third column service">
+                <Link to="/services">
+                  <i className="fa fa-users" aria-hidden="true"></i>
+                  <p>Event Planning</p>
+                </Link>
+              </div>
+              <div className="one-third column service">
+                <Link to="/services">
+                  <i className="fa fa-briefcase" aria-hidden="true"></i>
+                  <p>Board Training</p>
+                </Link>
+              </div>
             </div>
           </div>
           <div className="four columns">

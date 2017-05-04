@@ -1,3 +1,19 @@
-h3.home-header {
-  font-size: 20px;
+.home-header {
+  text-align: center;
+  font-size: 1.6em;
+}
+
+.service {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.service i {
+  font-size: 5em;
+  color: #F7941D;
+}
+
+.service p {
+  font-size: 1.5em;
+  margin-top: 10px;
 }

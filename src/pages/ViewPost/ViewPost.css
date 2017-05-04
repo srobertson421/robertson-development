@@ -1,0 +1,19 @@
+.post {
+
+}
+
+.post p {
+  margin-bottom: 0;
+  font-size: 1.2em;
+}
+
+.post .page-header {
+  margin-bottom: 0;
+  font-size: 2em;
+}
+
+.post .post-time {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}

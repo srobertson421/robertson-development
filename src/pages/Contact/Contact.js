@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
 
 import EventPhotoWidget from '../../components/EventPhotoWidget/EventPhotoWidget';
+import contactImage from '../../images/mountain.jpg';
 
 class Contact extends Component {
   render() {
-    let items = [];
-    for(let key in this.props.pageData.mainText) {
-      if(key === 'lede' || key === 'type') {
-        continue;
-      }
-
-      items.push((<p key={key}>{this.props.pageData.mainText[key]}</p>));
-    }
-
     return (
       <div className="container">
         <div className="row">
           <div className="eight columns content-area">
-            {items}
+            <h3 className="page-header">Contact</h3>
+            <hr className="pretty"></hr>
+            <p>Sharon Robertson</p>
+            <p>sharon@robertson-development.com</p>
+            <p>(509) 991-0301</p>
+            <p>P O Box 30774</p>
+            <p>Spokane, WA 99223</p>
           </div>
           <div className="four columns">
-            <EventPhotoWidget currentPage={this.props.pageName} />
+            <EventPhotoWidget currentPage={this.props.pageName} imagePath={contactImage} />
           </div>
         </div>
       </div>

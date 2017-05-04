@@ -12,11 +12,11 @@ class Admin extends Component {
         <div className="container">
           <div className="row">
             <div className="twelve columns content-area">
-              <h3 className="home-header page-header">Admin</h3>
+              <h3 className="page-header">Admin</h3>
               <button onClick={(e) => {this.logout(e)}}>Logout</button>
               <div className="row">
                 <PostEditor />
-                <h4>Posts</h4>
+                <h4 class="posts-header">Posts</h4>
                 <PostList posts={this.props.posts} />
               </div>
             </div>

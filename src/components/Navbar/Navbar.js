@@ -1,26 +1,17 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
-import { storage } from '../../services/firebase-service';
 import { getCurrentLocation } from '../../services/helpers-service';
-const navbarRef = storage.ref().child('navbar');
-const largeLogo = navbarRef.child('large_logo.png');
+import largeLogo from '../../images/large_logo.png';
 
 class Navbar extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      headerLogo: '',
       menuOpen: false,
       currentPage: getCurrentLocation(true)
     }
-  }
-
-  componentDidMount() {
-    largeLogo.getDownloadURL().then((url) => {
-      this.setState({headerLogo: url});
-    });
   }
 
   render() {
@@ -31,7 +22,7 @@ class Navbar extends Component {
     let adminLink = <li onClick={(e) => {this.toggleMenu(e)}}><NavLink to="/admin">Admin</NavLink></li>
     return (
       <div>
-        <img id="header-image" className="img-responsive" src={this.state.headerLogo} alt="Robertson Development Logo"/>
+        <img id="header-image" className="img-responsive" src={largeLogo} alt="Robertson Development Logo"/>
         <nav id="navbar" className="u-full-width">
           <div className="container">
             <div className="row">

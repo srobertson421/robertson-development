@@ -23,88 +23,11 @@ class App extends Component {
       "user": null,
       publishedPosts: [],
       posts: [],
-      postsObj: {},
-      "siteContent" : {
-        "pages" : {
-          "about" : {
-            "mainText" : {
-              "lede" : "",
-              "line1" : "",
-              "line2" : "",
-              "line3" : "",
-              "line4" : "",
-              "line5" : "",
-              "line6" : "",
-              "type" : ""
-            }
-          },
-          "contact" : {
-            "mainText" : {
-              "line1" : "",
-              "line2" : "",
-              "line3" : "",
-              "line4" : "",
-              "line5" : "",
-              "type" : ""
-            }
-          },
-          "home" : {
-            "mainText" : {
-              "text" : "",
-              "type" : ""
-            }
-          },
-          "resources" : {
-            "mainText" : {
-              "lede" : "",
-              "line1" : "",
-              "line2" : "",
-              "line3" : "",
-              "line4" : "",
-              "type" : ""
-            },
-            "secondaryText" : ""
-          },
-          "services" : {
-            "mainText" : {
-              "lede" : "",
-              "listItems" : {
-                "1": '',
-                "2": '',
-                "3": '',
-                "4": '',
-                "5": '',
-                "6": '',
-                "7": '',
-                "8": '',
-                "9": '',
-                "10": '',
-                "11": '',
-                "12": ''
-              },
-              "type" : ""
-            }
-          },
-          "testimonials" : {
-            "mainText" : {
-              "line1" : "",
-              "line2" : "",
-              "line3" : "",
-              "line4" : "",
-              "line5" : "",
-              "type" : ""
-            }
-          }
-        }
-      }
+      postsObj: {}
     }
   }
 
   componentDidMount() {
-    db.ref('content').on('value', (snapshot) => {
-      this.setState({siteContent: snapshot.val()});
-    });
-
     db.ref('posts').on('value', (snapshot) => {
       let postArr = [];
       let publishedPostsArr = [];
@@ -164,7 +87,6 @@ class App extends Component {
 
   routeRender(props) {
     props.pageName = props.location.pathname.substring(1, props.location.pathname.length) || 'home';
-    props.pageData = this.state.siteContent.pages[props.pageName];
 
     if(props.pageName.match('post')) {
       props.pageName = 'post';

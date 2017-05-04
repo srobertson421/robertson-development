@@ -1,0 +1,20 @@
+.columns.service-item {
+  width: 50%;
+  text-align: center;
+}
+
+.columns.service-item i {
+  font-size: 3em;
+  color: #F7941D;
+}
+
+.columns.service-item p {
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+@media (min-width: 550px) {
+  .service-item {
+    width: 22%;
+  }
+}
