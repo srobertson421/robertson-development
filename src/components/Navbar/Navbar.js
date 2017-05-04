@@ -15,11 +15,10 @@ class Navbar extends Component {
   }
 
   render() {
-    //let adminLink = null;
-    // if(this.props.isLoggedIn) {
-    //   adminLink = <li onClick={(e) => {this.toggleMenu(e)}}><NavLink to="/admin">Admin</NavLink></li>
-    // }
-    let adminLink = <li onClick={(e) => {this.toggleMenu(e)}}><NavLink to="/admin">Admin</NavLink></li>
+    let adminLink = null;
+    if(this.props.isLoggedIn) {
+      adminLink = <li onClick={(e) => {this.toggleMenu(e)}}><NavLink to="/admin">Admin</NavLink></li>
+    }
     return (
       <div>
         <img id="header-image" className="img-responsive" src={largeLogo} alt="Robertson Development Logo"/>
