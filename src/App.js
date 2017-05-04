@@ -59,7 +59,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router basename="/robertson-development">
+      <Router>
         <div id="main-container">
           <Navbar isLoggedIn={!!this.state.user} />
           <Route exact path="/" render={(props) => {return this.routeRender(props)}} />
