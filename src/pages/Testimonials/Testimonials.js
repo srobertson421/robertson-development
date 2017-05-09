@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 
-import testimonialsImage from '../../images/pond.jpg';
-import EventPhotoWidget from '../../components/EventPhotoWidget/EventPhotoWidget';
-
 class Testimonials extends Component {
   render() {
     return (
       <div className="container">
         <div className="row">
-          <div className="eight columns content-area">
+          <div className="twelve columns content-area">
             <h3 className="page-header">Testimonials</h3>
             <hr className="pretty"></hr>
             <div>
@@ -31,9 +28,6 @@ class Testimonials extends Component {
               <i>"Sharon is the type of person you want in the room. She is energetic and always ready to take on a task."</i>
               <p>- Lisa Curtis, United Way of Spokane</p>
             </div>
-          </div>
-          <div className="four columns">
-            <EventPhotoWidget currentPage={this.props.pageName} imagePath={testimonialsImage} />
           </div>
         </div>
       </div>

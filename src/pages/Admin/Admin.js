@@ -16,7 +16,7 @@ class Admin extends Component {
               <button onClick={(e) => {this.logout(e)}}>Logout</button>
               <div className="row">
                 <PostEditor />
-                <h4 class="posts-header">Posts</h4>
+                <h4 className="posts-header">Posts</h4>
                 <PostList posts={this.props.posts} />
               </div>
             </div>

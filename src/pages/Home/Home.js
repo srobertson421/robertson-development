@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
-import homeImage from '../../images/homepage-side.jpg';
-
-import EventPhotoWidget from '../../components/EventPhotoWidget/EventPhotoWidget';
 
 class Home extends Component {
   render() {
     return (
       <div className="container">
         <div className="row">
-          <div className="eight columns content-area">
+          <div className="twelve columns content-area">
             <h3 className="home-header">Connecting people and organizations to ideas and resources that create opportunities to grow</h3>
             <hr className="pretty"></hr>
             <h3 className="home-header">I can help with</h3>
@@ -29,7 +26,7 @@ class Home extends Component {
               </div>
               <div className="one-third column service">
                 <Link to="/services">
-                  <i className="fa fa-graduation-cap" aria-hidden="true"></i>
+                  <i className="fa fa-bullhorn" aria-hidden="true"></i>
                   <p>Funding Stream Coaching</p>
                 </Link>
               </div>
@@ -54,9 +51,6 @@ class Home extends Component {
                 </Link>
               </div>
             </div>
-          </div>
-          <div className="four columns">
-            <EventPhotoWidget currentPage={this.props.pageName} imagePath={homeImage} />
           </div>
         </div>
       </div>

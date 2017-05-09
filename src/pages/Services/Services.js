@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
-
-import servicesImage from '../../images/beach.png';
 import './Services.css';
-
-import EventPhotoWidget from '../../components/EventPhotoWidget/EventPhotoWidget';
 
 class Services extends Component {
   render() {
     return (
       <div className="container">
         <div className="row">
-          <div className="eight columns content-area">
+          <div className="twelve columns content-area">
             <h3 className="page-header">Services</h3>
             <hr className="pretty"></hr>
             <div className="row">
@@ -23,7 +19,7 @@ class Services extends Component {
                 <p>Annual Fund Development</p>
               </div>
               <div className="three columns service-item">
-                <i className="fa fa-graduation-cap" aria-hidden="true"></i>
+                <i className="fa fa-bullhorn" aria-hidden="true"></i>
                 <p>Funding Stream Coaching</p>
               </div>
               <div className="three columns service-item">
@@ -67,9 +63,6 @@ class Services extends Component {
                 <p>Planned and Legacy Gifts</p>
               </div>
             </div>
-          </div>
-          <div className="four columns">
-            <EventPhotoWidget currentPage={this.props.pageName} imagePath={servicesImage} />
           </div>
         </div>
       </div>
