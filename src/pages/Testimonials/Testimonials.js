@@ -9,10 +9,6 @@ class Testimonials extends Component {
             <h3 className="page-header">Testimonials</h3>
             <hr className="pretty"></hr>
             <div>
-              <i>"I had the privilege of working with Sharon for more than a year. She played a pivotal role in my practice and helping kickstart my career."</i>
-              <p>- Brad Messerschmidt, Thrivent Financial</p>
-            </div>
-            <div>
               <i>"Sharon is one of the best community advocates I have had the pleasure to meet. She truly cares about the groups she partners with and actively seeks to increase their presence in and impact on the community."</i>
               <p>- Heather Beebe-Stevens, Spokane Parks Foundation</p>
             </div>

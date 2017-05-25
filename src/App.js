@@ -43,7 +43,15 @@ class App extends Component {
         postArr.push(post);
       }
 
-      this.setState({posts: postArr, publishedPosts: publishedPostsArr, postsObj: posts});
+      let sortedPostsArr = publishedPostsArr.sort(function(a, b) {
+          a = new Date(a.createdAt);
+          b = new Date(b.createdAt);
+          return a>b ? -1 : a<b ? 1 : 0;
+      });
+
+      console.log(sortedPostsArr);
+
+      this.setState({posts: sortedPostsArr, publishedPosts: publishedPostsArr, postsObj: posts});
     });
 
     auth.onAuthStateChanged((user) => {

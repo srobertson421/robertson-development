@@ -17,11 +17,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cat ./build/index.html > ./build/200.html",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "git subtree push --prefix build origin gh-pages",
-    "deploy-surge": "surge ./build --domain https://robertson-development.surge.sh",
-    "deploy-force": "git push origin `git subtree split --prefix build master`:gh-pages --force"
+    "deploy-force": "git push origin `git subtree split --prefix build master`:gh-pages --force",
+    "deploy-surge-http": "surge ./build --domain http://robertson-development.com",
+    "deploy-surge-https": "surge ./build --domain https://robertson-development.com"
   }
 }
