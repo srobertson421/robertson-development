@@ -45,10 +45,7 @@ class ViewPost extends Component {
           { property: 'og:url', content: `https://robertson-development.com/post/${this.state.postId}/${encodeURI(this.state.post.title)}` },
           { property: 'og:description', content: this.state.post.content.replace(/(<([^>]+)>)/ig,"") },
           ]}
-        >
-          <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-          <script type="IN/Share"></script>
-        </Helmet>
+        ></Helmet>
         <div className="row post">
           <div className="twelve columns content-area">
             <h3 className="page-header">{this.state.post.title}</h3>
