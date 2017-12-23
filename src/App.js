@@ -49,8 +49,6 @@ class App extends Component {
           return a>b ? -1 : a<b ? 1 : 0;
       });
 
-      console.log(sortedPostsArr);
-
       this.setState({posts: sortedPostsArr, publishedPosts: publishedPostsArr, postsObj: posts});
     });
 

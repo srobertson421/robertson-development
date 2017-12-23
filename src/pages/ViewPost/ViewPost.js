@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
+import { Helmet } from "react-helmet";
 import { db } from '../../services/firebase-service';
 
 import './ViewPost.css';
@@ -9,6 +10,7 @@ class ViewPost extends Component {
     super(props);
 
     this.state = {
+      postId: '',
       post: {
         title: '',
         content: '',
@@ -20,7 +22,9 @@ class ViewPost extends Component {
   componentDidMount() {
     db.ref(`posts/${this.props.match.params.id}`).on('value', (snapshot) => {
       let post = snapshot.val();
-      this.setState({post: post});
+      console.log(snapshot);
+      console.log(post);
+      this.setState({post: post, postId: snapshot.key});
       this.refs.postContent.innerHTML = post.content;
     });
   }
@@ -28,6 +32,22 @@ class ViewPost extends Component {
   render() {
     return (
       <div className="container">
+        <Helmet
+          title={this.state.post.title}
+          meta={[
+          { name: 'author', content: "Sharon Robertson" },
+
+          { name: 'twitter:site', content: "https://robertson-development.com" },
+          { name: 'twitter:creator', content: "Sharon Robertson" },
+          { name: 'twitter:title', content: this.state.post.title },
+
+          { property: 'og:title', content: this.state.post.title },
+          { property: 'og:site_name', content: "Robertson Development" },
+          { property: 'og:type', content: "website" },
+          { property: 'og:url', content: `https://robertson-development.com/post/${this.state.postId}/${encodeURI(this.state.post.title)}` },
+          { property: 'og:description', content: this.state.post.content.replace(/(<([^>]+)>)/ig,"") },
+          ]}
+        />
         <div className="row post">
           <div className="twelve columns content-area">
             <h3 className="page-header">{this.state.post.title}</h3>
