@@ -9,6 +9,10 @@ class Testimonials extends Component {
             <h3 className="page-header">Testimonials</h3>
             <hr className="pretty"></hr>
             <div>
+              <i>"Sharon has been a game changer for us - in the amount of donations we've received, in grant funding, just in overall community presence."</i>
+              <p>- Julie Farley, Project Beauty Share</p>
+            </div>
+            <div>
               <i>"Sharon is one of the best community advocates I have had the pleasure to meet. She truly cares about the groups she partners with and actively seeks to increase their presence in and impact on the community."</i>
               <p>- Heather Beebe-Stevens, Spokane Parks Foundation</p>
             </div>
